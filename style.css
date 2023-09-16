@@ -1,0 +1,40 @@
+body {
+    background-color: #9ad1dc;
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+}
+
+.intro {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    color: rgb(80, 40, 12);
+}
+
+#countdown {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.snowflake {
+    position: absolute;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: snowfall 5s linear infinite;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-5%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

