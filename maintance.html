@@ -13,11 +13,10 @@
 </head>
 <body>
     <a href="https://discord.gg/ath2EPGJDU" class="discord-button" target="_blank">Discord</a>
-    <a href="https://info.flagcounter.com/2997"></a>
     
     <div class="intro">
-        <h1><a href="did-you-pray-today/index.html" class="intro">D</a>armowe odpowiedzi do prac domowych i testów, bez reklam</h1>
-        <p id="countdown">Zostaniesz przekierowany za <span id="seconds">5</span> sekund</p>
+        <h1>⚠️ Trwa przerwa techniczna! ⚠️</h1>
+        <p>Staramy się wrócić jak najszybciej!</p>
     </div>
     <div class="snowflake"></div>
     <div class="snowflake"></div>
@@ -27,24 +26,8 @@
     
 
     <script>
-        // Ustaw czas odliczania w sekundach
-        var countdownSeconds = 5;
-
-        function updateCountdown() {
-            var secondsSpan = document.getElementById("seconds");
-            secondsSpan.textContent = countdownSeconds;
-            countdownSeconds--;
-
-            // Wpisz tu link do przekierowania
-            if (countdownSeconds < 0) {
-                window.location.href = "https://www.ice-gay.com/";
-            }
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        function getRandomPosition() {
+       
+       function getRandomPosition() {
             var left = Math.random() * window.innerWidth;
             var top = -10;
             return { left: left, top: top };
