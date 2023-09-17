@@ -16,8 +16,8 @@
     <a href="https://info.flagcounter.com/2997"><img src="https://s01.flagcounter.com/mini/2997/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Flag Counter" border="0"></a>
     
     <div class="intro">
-        <h1>⚠️ Trwa przerwa techniczna! ⚠️</h1>
-        <p>Staramy się wrócić jak najszybciej!</p>
+        <h1><a href="did-you-pray-today/index.html" class="intro">D</a>armowe odpowiedzi do prac domowych i testów, bez reklam</h1>
+        <p id="countdown">Zostaniesz przekierowany za <span id="seconds">5</span> sekund</p>
     </div>
     <div class="snowflake"></div>
     <div class="snowflake"></div>
@@ -27,8 +27,24 @@
     
 
     <script>
-       
-       function getRandomPosition() {
+        // Ustaw czas odliczania w sekundach
+        var countdownSeconds = 5;
+
+        function updateCountdown() {
+            var secondsSpan = document.getElementById("seconds");
+            secondsSpan.textContent = countdownSeconds;
+            countdownSeconds--;
+
+            // Wpisz tu link do przekierowania
+            if (countdownSeconds < 0) {
+                window.location.href = "https://www.ice-gay.com/";
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        function getRandomPosition() {
             var left = Math.random() * window.innerWidth;
             var top = -10;
             return { left: left, top: top };
