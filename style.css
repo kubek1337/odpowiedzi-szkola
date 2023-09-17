@@ -12,6 +12,7 @@ body {
     font-size: 1.7em;
     color: rgb(80, 40, 12);
     text-decoration: none;
+    text-align: center;
 }
 
 #countdown {
