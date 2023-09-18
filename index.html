@@ -37,7 +37,7 @@
 
             // Wpisz tu link do przekierowania
             if (countdownSeconds < 0) {
-                window.location.href = "https://www.ice-gay.com/";
+                window.location.href = "https://landing.mennetwork.com/";
             }
         }
 
@@ -58,13 +58,13 @@
             snowflake.style.top = position.top + 'px';
             document.body.appendChild(snowflake);
 
-            
             snowflake.addEventListener('animationiteration', function () {
                 document.body.removeChild(snowflake);
                 createSnowflake();
             });
         }
 
+        // Tworzenie śniegu co 0.2 sekundy (200 milisekund)
         setInterval(createSnowflake, 50);
     </script>
 </body>
