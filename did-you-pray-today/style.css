@@ -1,5 +1,5 @@
 body {
-    background-color: #9ad1dc;
+    background-color: #b5e7a0;
     display: flex;
             justify-content: center;
             align-items: center;
@@ -10,7 +10,7 @@ body {
 .intro {
     font-family: 'Kanit', sans-serif;
     font-size: 1.7em;
-    color: rgb(80, 40, 12);
+    color: #3e4444;
     text-decoration: none;
 }
 
